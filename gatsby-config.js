@@ -6,9 +6,9 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Uniswap`,
-    description: `Automated liquidity protocol on Ethereum`,
-    author: `@Uniswap`,
+    title: `Vexchange`,
+    description: `Automated liquidity protocol on VeChain`,
+    author: `@Vexchange`,
     menulinks: menu,
     siteUrl: `https://uniswap.org`,
     repository: `https://github.com/Uniswap/uniswap-org`,
@@ -38,13 +38,6 @@ module.exports = {
       }
     },
     `re-slug`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blog`,
-        path: `${__dirname}/src/pages/blog/`
-      }
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -95,7 +88,6 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve('./src/layouts'),
           docs: require.resolve(`./src/layouts/docs`),
-          blog: require.resolve(`./src/layouts/blogPost`),
           faq: require.resolve(`./src/layouts/faq`)
         },
         remarkPlugins: [require(`remark-math`)],
@@ -108,9 +100,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-twitter-cards`,
             options: {
-              title: 'Uniswap', // website title
+              title: 'Vexchange', // website title
               separator: '|', // default
-              author: '@Uniswap',
+              author: '@vexchange',
               background: require.resolve('./static/images/twitter_card_bg.jpg'), // path to 1200x630px file or hex code, defaults to black (#000000)
               fontColor: '#FF3093', // defaults to white (#ffffff)
               fontStyle: 'sans-serif', // default
@@ -141,60 +133,6 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/fav.ico` // This path is relative to the root of the site.
-      }
-    },
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map(edge => {
-                return {
-                  description: edge.node.frontmatter.previewText,
-                  title: edge.node.frontmatter.title,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug
-                }
-              })
-            },
-            query: `
-            {
-              allMdx(filter: {fileAbsolutePath: {regex: "/blog/"}}, sort: {order: DESC, fields: frontmatter___date}) {
-                edges {
-                  node {
-                    id
-                    frontmatter {
-                      date
-                      title
-                      previewText
-                    }
-                    fields {
-                      slug
-                    }
-                    rawBody
-                  }
-                }
-              }
-            }
-            `,
-            output: '/rss.xml',
-            title: 'Uniswap Blog RSS Feed'
-          }
-        ]
       }
     },
     'gatsby-plugin-eslint',

@@ -48,18 +48,6 @@ const menu = [
     ]
   },
   {
-    name: 'Governance',
-    sublinks: [
-      {
-        name: 'UNI Token',
-        link: '/blog/uni'
-      },
-      { name: 'Forum', link: 'https://gov.uniswap.org/' },
-      { name: 'Voting Portal', link: 'https://app.uniswap.org/#/vote' },
-      { name: 'Documentation', link: '/docs/v2/governance/overview' }
-    ]
-  },
-  {
     name: 'Community',
     sublinks: [
       { name: 'Discord', link: 'https://discord.gg/FCfyBSbCU5' },
@@ -70,10 +58,6 @@ const menu = [
   {
     name: 'About',
     sublinks: [
-      {
-        name: 'Blog',
-        link: '/blog'
-      },
       {
         name: 'Info',
         link: '/about'
