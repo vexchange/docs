@@ -1,9 +1,9 @@
 ---
-title: Pair (ERC-20)
+title: Pair (VIP-180)
 tags: smart-contracts, documentation
 ---
 
-This documentation covers ERC-20 functionality for denominating pool tokens. For Uniswap-specific functionality, see <Link to='/docs/v2/smart-contracts/pair'>Pair</Link>.
+This documentation covers VIP-180 functionality for denominating pool tokens. For Uniswap-specific functionality, see <Link to='/docs/v2/smart-contracts/pair'>Pair</Link>.
 
 # Code
 

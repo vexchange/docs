@@ -4,34 +4,9 @@ const menu = [
     sublinks: [
       {
         name: 'App',
-        link: 'https://app.uniswap.org/#/',
+        link: 'https://vexchange.io',
         description: 'Swap tokens and supply liquidity'
       },
-      {
-        name: 'Analytics',
-        link: 'https://uniswap.info/',
-        description: 'Uniswap analytics and historical data'
-      },
-      {
-        name: 'Token Lists',
-        link: 'https://tokenlists.org/',
-        description: 'A new Ethereum token list standard.'
-      },
-      {
-        name: 'Unisocks',
-        link: 'https://unisocks.exchange/',
-        description: 'Dynamically priced socks'
-      },
-      {
-        name: 'Sybil',
-        link: 'https://sybil.org/#/',
-        description: 'Identities for governance'
-      },
-      {
-        name: 'Unipig',
-        link: 'https://unipig.exchange/',
-        description: 'Optimistic rollup demo'
-      }
     ]
   },
   {
@@ -41,18 +16,16 @@ const menu = [
         name: 'Documentation',
         link: '/docs/v2'
       },
-      { name: 'GitHub', link: 'https://github.com/Uniswap' },
+      { name: 'GitHub', link: 'https://github.com/VeChainDEXCode/' },
       { name: 'Whitepaper', link: '/whitepaper.pdf' },
       { name: 'Audit', link: '/audit.html' },
-      { name: 'Bug Bounty', link: '/bug-bounty' }
     ]
   },
   {
     name: 'Community',
     sublinks: [
-      { name: 'Discord', link: 'https://discord.gg/FCfyBSbCU5' },
-      { name: 'Twitter', link: 'https://twitter.com/Uniswap' },
-      { name: 'Reddit', link: 'https://www.reddit.com/r/Uniswap' }
+      { name: 'Telegram', link: 'https://t.me/vexchange' },
+      { name: 'Twitter', link: 'https://twitter.com/VexchangeIO' },
     ]
   },
   {
@@ -66,14 +39,6 @@ const menu = [
         name: 'FAQ',
         link: '/faq'
       },
-      {
-        name: 'Jobs',
-        link: '/about#jobs'
-      },
-      {
-        name: 'Logo & Brand',
-        link: '/about#brand'
-      }
     ]
   }
 ]

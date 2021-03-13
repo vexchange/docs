@@ -3,7 +3,7 @@ title: Pair
 tags: smart-contracts, documentation
 ---
 
-This documentation covers Uniswap-specific functionality. For ERC-20 functionality, see <Link to='/docs/v2/smart-contracts/pair-erc-20'>Pair (ERC-20)</Link>.
+This documentation covers Uniswap-specific functionality. For VIP-180 functionality, see <Link to='/docs/v2/smart-contracts/pair-vip-180'>Pair (VIP-180)</Link>.
 
 # Code
 
@@ -130,7 +130,7 @@ function mint(address to) external returns (uint liquidity);
 
 Creates pool tokens.
 
-- Emits [Mint](#mint), [Sync](#sync), <Link to='/docs/v2/smart-contracts/pair-erc-20#transfer'>Transfer</Link>.
+- Emits [Mint](#mint), [Sync](#sync), <Link to='/docs/v2/smart-contracts/pair-VIP-180#transfer'>Transfer</Link>.
 
 ## burn
 
@@ -140,7 +140,7 @@ function burn(address to) external returns (uint amount0, uint amount1);
 
 Destroys pool tokens.
 
-- Emits [Burn](#burn), [Sync](#sync), <Link to='/docs/v2/smart-contracts/pair-erc-20#transfer'>Transfer</Link>.
+- Emits [Burn](#burn), [Sync](#sync), <Link to='/docs/v2/smart-contracts/pair-VIP-180#transfer'>Transfer</Link>.
 
 ## swap
 

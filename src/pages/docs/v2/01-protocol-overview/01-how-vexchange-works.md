@@ -11,7 +11,7 @@ It obviates the need for trusted intermediaries, prioritizing **decentralization
 and **security**. Vexchange is **open-source software** licensed under the
 [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License).
 
-Each Vexchange smart contract, or pair, manages a liquidity pool made up of reserves of two [ERC-20](https://eips.VeChain.org/EIPS/eip-20) tokens.
+Each Vexchange smart contract, or pair, manages a liquidity pool made up of reserves of two [VIP-180](https://eips.VeChain.org/EIPS/eip-20) tokens.
 
 Anyone can become a liquidity provider (LP) for a pool by depositing an equivalent value of each underlying token in return for pool tokens. These tokens track pro-rata LP shares of the total reserves, and can be redeemed for the underlying assets at any time.
 

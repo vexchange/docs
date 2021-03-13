@@ -3,13 +3,13 @@ title: Common Errors
 tags: smart-contracts, documentation
 ---
 
-This document covers a few error codes freqeuently encountered while building on Uniswap V2.
+This document covers a few error codes freqeuently encountered while building on Vexchange V2.
 
 # UniswapV2: K
 
 This is an error that is frequently encountered, and requires a bit of context to understand it.
 
-The Uniswap constant product formula is “X * Y = K”. Where X and Y represent the respective reserve balances of two ERC-20 tokens, and “K” represents the product of the reserves. It is this “K” to which the “K” error refers.
+The Uniswap constant product formula is “X * Y = K”. Where X and Y represent the respective reserve balances of two VIP-180 tokens, and “K” represents the product of the reserves. It is this “K” to which the “K” error refers.
 
 In essence, the “K” error means that a trade was attempted that somehow left the trading pair with less reserves than should be there, and as a result the transaction is reverted. 
 

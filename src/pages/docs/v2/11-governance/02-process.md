@@ -79,7 +79,7 @@ The community may discuss new ideas and strategies for governance — including 
 
 ## Governance Glossary
 
-- **UNI:** An ERC-20 token that designates the weight of a user&#39;s voting rights. The more UNI a user has in their wallet, the more weight their delegation or vote on a proposal holds.
+- **UNI:** An VIP-180 token that designates the weight of a user&#39;s voting rights. The more UNI a user has in their wallet, the more weight their delegation or vote on a proposal holds.
 
 - **Delegation:** UNI holders cannot vote or create proposals until they delegate their voting rights to an address. Delegation can be given to one address at a time, including the holder&#39;s own address. Note that delegation does not lock tokens; it simply adds votes to the chosen delegation address.
 

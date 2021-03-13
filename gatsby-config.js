@@ -10,8 +10,8 @@ module.exports = {
     description: `Automated liquidity protocol on VeChain`,
     author: `@Vexchange`,
     menulinks: menu,
-    siteUrl: `https://uniswap.org`,
-    repository: `https://github.com/Uniswap/uniswap-org`,
+    siteUrl: `https://vexchange.io`,
+    repository: `https://github.com/VeChainDEXCode`,
     commit: process.env.NOW_GITHUB_COMMIT_SHA || `master`
   },
   plugins: [
@@ -27,7 +27,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://uniswap.org`
+        siteUrl: `https://vexchange.io`
       }
     },
     {

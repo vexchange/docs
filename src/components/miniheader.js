@@ -9,7 +9,6 @@ import { Sun, Moon, Home } from 'react-feather'
 
 import MenuIcon from '../images/menu.inline.svg'
 import CloseIcon from '../images/x.inline.svg'
-import Discord from '../images/discord.inline.svg'
 import Github from '../images/githubicon.inline.svg'
 
 import SidebarV2 from './sidebarV2'
@@ -260,12 +259,7 @@ const Header = props => {
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </StyledButton>
           <StyledButton fill>
-            <a href="https://discord.gg/FCfyBSbCU5">
-              <Discord />
-            </a>
-          </StyledButton>
-          <StyledButton fill>
-            <a href="https://github.com/Uniswap">
+            <a href="https://github.com/VeChainDEXCode/">
               <Github width={20} />
             </a>
           </StyledButton>

@@ -2,6 +2,8 @@
 title: Vexchange Documentation
 ---
 
+**Look familiar? Before you say it we know, these docs were forked from Uniswap.**
+
 Welcome! The pages that follow contain comprehensive documentation of the Vexchange V2 ecosystem. If you are new to Vexchange, you might want to check out the <Link to="/docs/v2/protocol-overview">Protocol Overview</Link> or <Link to="/faq">FAQ</Link> first.
 
 For a high-level overview of V2, see the <Link to='/blog/vexchange-v2'>introductory blog post</Link>.
@@ -31,6 +33,6 @@ Get to know the Vexchange SDK and smart contract API objects, methods, attribute
 - [Whitepaper](/whitepaper.pdf)
 - <Link to="/docs/v2/governance/governance-reference">Governance</Link>
 
-### Developer community
+### Community
 
-Join the Vexchange developer community on [Discord](https://discord.gg/FCfyBSbCU5).
+Join the Vexchange community on [Telegram](https://t.me/vexchange).

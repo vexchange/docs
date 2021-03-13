@@ -302,13 +302,13 @@ const About = props => {
             </p>
 
             <p>
-              We encourage anyone facing issues with their wallet, transaction or Uniswap related question to join our
-              active community discord.
+              We encourage anyone facing issues with their wallet, transaction or Vexchange related question to join our
+              active community telegram.
             </p>
 
             <div style={{ display: 'flex', width: '100%', margin: 0 }}>
               <InternalLink>
-                Discord <span style={{ fontSize: '11px' }}>↗</span>
+                Telegram <span style={{ fontSize: '11px' }}>↗</span>
               </InternalLink>
               <InternalLink>
                 Twitter <span style={{ fontSize: '11px' }}>↗</span>

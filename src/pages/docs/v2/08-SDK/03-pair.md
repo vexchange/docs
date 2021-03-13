@@ -12,7 +12,7 @@ The Pair entity represents a Uniswap pair with a balance of each of its pair tok
 # Example
 
 ```typescript
-import { ChainId, Token, TokenAmount, Pair } from '@uniswap/sdk'
+import { ChainId, Token, TokenAmount, Pair } from 'vexchange-sdk'
 
 const HOT = new Token(ChainId.MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')
 const NOT = new Token(ChainId.MAINNET, '0xDeCAf00000000000000000000000000000000000', 18, 'NOT', 'Caffeine')
@@ -38,7 +38,7 @@ Computes the pair address for the passed <Link to='/docs/v2/SDK/token'>Token</Li
 liquidityToken: Token
 ```
 
-A Token representing the liquidity token for the pair. See <Link to='/docs/v2/smart-contracts/pair-erc-20'>Pair (ERC-20)</Link>.
+A Token representing the liquidity token for the pair. See <Link to='/docs/v2/smart-contracts/pair-vip-180'>Pair (VIP-180)</Link>.
 
 ## token0
 

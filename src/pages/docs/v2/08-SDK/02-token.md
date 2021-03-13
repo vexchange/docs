@@ -7,7 +7,7 @@ tags: sdk, documentation
 constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string)
 ```
 
-The Token entity represents an ERC-20 token at a specific address on a specific chain.
+The Token entity represents an VIP-180 token at a specific address on a specific chain.
 
 # Example
 
