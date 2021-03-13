@@ -132,7 +132,6 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/fav.ico` // This path is relative to the root of the site.
       }
     },
     'gatsby-plugin-eslint',
@@ -143,6 +142,12 @@ module.exports = {
         indexName: 'uniswap_v2_docs',
         appId: 'VZ0CVS8XCW',
         inputSelector: 'blank' // use dummy selector to avoid double render
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-emoji-favicon',
+      options: {
+        emoji: '🔥'
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
