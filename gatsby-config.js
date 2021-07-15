@@ -11,7 +11,7 @@ module.exports = {
     author: `@Vexchange`,
     menulinks: menu,
     siteUrl: `https://vexchange.io`,
-    repository: `https://github.com/VeChainDEXCode`,
+    repository: `https://github.com/vexchange`,
     commit: process.env.NOW_GITHUB_COMMIT_SHA || `master`
   },
   plugins: [

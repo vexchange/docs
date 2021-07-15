@@ -16,7 +16,7 @@ const menu = [
         name: 'Documentation',
         link: '/docs/v2'
       },
-      { name: 'GitHub', link: 'https://github.com/VeChainDEXCode/' },
+      { name: 'GitHub', link: 'https://github.com/vexchange/' },
       { name: 'Whitepaper', link: '/whitepaper.pdf' },
       { name: 'Audit', link: '/audit.html' },
     ]

@@ -259,7 +259,7 @@ const Header = props => {
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </StyledButton>
           <StyledButton fill>
-            <a href="https://github.com/VeChainDEXCode/">
+            <a href="https://github.com/vexchange/">
               <Github width={20} />
             </a>
           </StyledButton>

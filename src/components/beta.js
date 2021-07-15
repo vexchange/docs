@@ -29,7 +29,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       This site is a work in progress.{' '}
-      <a href="https://github.com/VeChainDEXCode/vexchange-docs/issues">
+      <a href="https://github.com/vexchange/vexchange-docs/issues">
         <u>Found an issue?</u>
       </a>
     </StyledFooter>
