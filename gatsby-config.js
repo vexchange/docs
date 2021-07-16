@@ -20,7 +20,7 @@ module.exports = {
       options: {
         bucketName: process.env.AWS_S3_BUCKET || 'NOT_SPECIFIED',
         protocol: 'https',
-        hostname: 'uniswap.org',
+        hostname: 'vexchange.io',
         acl: null
       }
     },
@@ -139,7 +139,7 @@ module.exports = {
       resolve: `gatsby-plugin-algolia-docsearch-appid`,
       options: {
         apiKey: '8962240e69e6d23a88432f501c115470',
-        indexName: 'uniswap_v2_docs',
+        indexName: 'vexchange_v2_docs',
         appId: 'VZ0CVS8XCW',
         inputSelector: 'blank' // use dummy selector to avoid double render
       }

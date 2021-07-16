@@ -266,7 +266,7 @@ const About = props => {
           </Numbers>
           <StyledSectionFlex id="about" style={{ flexDirection: 'column' }}>
             <p>
-              Uniswap empowers developers, liquidity providers and traders to participate in a financial marketplace
+              Vexchange empowers developers, liquidity providers and traders to participate in a financial marketplace
               that is open and accessible to all.
             </p>
             <p>We are committed to open source software and building on the decentralized web.</p>
