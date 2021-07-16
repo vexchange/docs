@@ -256,8 +256,8 @@ const Header = props => {
             textDecoration: `none`
           }}
         >
-          <StyledUni />
-          <HeaderText>Uniswap</HeaderText>
+          {/* <StyledUni /> */}
+          <HeaderText>Vexchange</HeaderText>
         </StyledHomeLink>
       </StyledNavTitleWrapper>
       <MenuToggle ref={button} open={isMenuOpen} onClick={() => updateIsMenuOpen(!isMenuOpen)}>
@@ -276,13 +276,13 @@ const Header = props => {
         {props.path !== undefined && (
           <StyledTradeLink
             style={{
-              background: `linear-gradient(128.17deg, #BD00FF -14.78%, #FF1F8A 110.05%)`,
+              background: 'linear-gradient(to right, rgb(231, 150, 49), rgb(217, 41, 33))',
               color: 'white'
             }}
             target="_blank"
-            href="https://app.uniswap.org/"
+            href="https://vexchange.io"
           >
-            Use Uniswap
+            Use Vexchange
           </StyledTradeLink>
         )}
       </StyledNav>
