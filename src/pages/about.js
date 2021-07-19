@@ -274,7 +274,7 @@ const About = props => {
             <div style={{ display: 'flex', width: '100%', margin: 0 }}>
               <InternalLink to="/blog/uni">UNI token</InternalLink>
               <InternalLink to="/whitepaper.pdf">
-                Whitepaper <span style={{ fontSize: '11px' }}>↗</span>
+                Uniswap Whitepaper <span style={{ fontSize: '11px' }}>↗</span>
               </InternalLink>
               <InternalLink to="/audit.html">
                 Audit <span style={{ fontSize: '11px' }}>↗</span>
