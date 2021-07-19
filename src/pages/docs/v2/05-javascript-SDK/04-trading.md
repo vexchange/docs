@@ -11,12 +11,12 @@ This guide will focus exclusively on sending a transaction to the <Link to='/doc
 
 # Sending a Transaction to the Router
 
-Let's say we want to trade 1 VVET for as much DAI as possible:
+Let's say we want to trade 1 VVET for as much VTHO as possible:
 
 ```typescript
 import { ChainId, Token, VVET, Fetcher, Trade, Route, TokenAmount, TradeType } from 'vexchange-sdk'
 
-const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
+const VTHO = new Token(ChainId.MAINNET, '0x0000000000000000000000000000456E65726779', 18)
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option

@@ -152,12 +152,12 @@ Token data can be fetched using the token contract address as an ID. Token data 
 
 #### Token Overview
 
-Get a snapshot of the current stats on a token in Uniswap. This query fetches current stats on DAI.
-The allPairs field gets the first 200 pairs DAI is included in sorted by liquidity in derived USD.
+Get a snapshot of the current stats on a token in Uniswap. This query fetches current stats on VTHO.
+The allPairs field gets the first 200 pairs VTHO is included in sorted by liquidity in derived USD.
 
 ```
 {
- token(id: "0x6b175474e89094c44da98b954eedeac495271d0f"){
+ token(id: "0x0000000000000000000000000000456E65726779"){
    name
    symbol
    decimals
@@ -238,13 +238,13 @@ query($allPairs: [String!]) {
 
 #### Token Daily Aggregated
 
-Like pair and global daily lookups, tokens have daily entities that can be queries as well. This query gets daily information for DAI. Note that you may want to sort in ascending order to receive your days from oldest to most recent in the return array.
+Like pair and global daily lookups, tokens have daily entities that can be queries as well. This query gets daily information for VTHO. Note that you may want to sort in ascending order to receive your days from oldest to most recent in the return array.
 
 ```
 {
  tokenDayDatas(orderBy: date, orderDirection: asc,
   where: {
-    token: "0x6b175474e89094c44da98b954eedeac495271d0f"
+    token: "0x0000000000000000000000000000456E65726779"
   }
  ) {
     id

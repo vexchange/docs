@@ -18,7 +18,7 @@ As an example, let's try to represent VTHO in a format the SDK can work with. To
 
 The first two pieces of data — **chainId** and **token address** — must be provided by us. Thinking about it, this makes sense, as there's really no other way to unambiguously identify a token.
 
-So, in the case of VTHO, we know that the **chainId** is `1` (we're on mainnet), and the **token address** is `0x6B175474E89094C44Da98b954EedeAC495271d0F`. Note that it's very important to externally verify token addresses. Don't use addresses from sources you don't trust!
+So, in the case of VTHO, we know that the **chainId** is `0x4a` (we're on mainnet), and the **token address** is `0x0000000000000000000000000000456E65726779`. Note that it's very important to externally verify token addresses. Don't use addresses from sources you don't trust!
 
 ## Required Data
 
@@ -32,7 +32,7 @@ One option here is to simply pass in the correct value, which we may know is `18
 import { ChainId, Token } from 'vexchange-sdk'
 
 const chainId = ChainId.MAINNET
-const tokenAddress = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // must be checksummed
+const tokenAddress = '0x0000000000000000000000000000456E65726779' // must be checksummed
 const decimals = 18
 
 const VTHO = new Token(chainId, tokenAddress, decimals)
@@ -56,7 +56,7 @@ If we don't want to provide or look up the value ourselves, we can ask the SDK t
 import { ChainId, Token, Fetcher } from 'vexchange-sdk'
 
 const chainId = ChainId.MAINNET
-const tokenAddress = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // must be checksummed
+const tokenAddress = '0x0000000000000000000000000000456E65726779' // must be checksummed
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
@@ -76,7 +76,7 @@ import { ChainId, Token } from 'vexchange-sdk'
 
 const VTHO = new Token(
   ChainId.MAINNET,
-  '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+  '0x0000000000000000000000000000456E65726779',
   18,
   'VTHO',
   'VTHO Stablecoin'
@@ -92,7 +92,7 @@ import { ChainId, Token, Fetcher } from 'vexchange-sdk'
 // for example if top-level await is not an option
 const VTHO = await Fetcher.fetchTokenData(
   ChainId.MAINNET,
-  '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+  '0x0000000000000000000000000000456E65726779',
   undefined,
   'VTHO',
   'VTHO Stablecoin'
@@ -120,7 +120,7 @@ One option here is to simply pass in values which we've fetched ourselves to cre
 ```typescript
 import { ChainId, Token, VVET, Pair, TokenAmount } from 'vexchange-sdk'
 
-const VTHO = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
+const VTHO = new Token(ChainId.MAINNET, '0x0000000000000000000000000000456E65726779', 18)
 
 async function getPair(): Promise<Pair> {
   const pairAddress = Pair.getAddress(VTHO, VVET[VTHO.chainId])
@@ -145,7 +145,7 @@ If we don't want to look up the value ourselves, we can ask the SDK to look them
 ```typescript
 import { ChainId, Token, VVET, Fetcher } from 'vexchange-sdk'
 
-const VTHO = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
+const VTHO = new Token(ChainId.MAINNET, '0x0000000000000000000000000000456E65726779', 18)
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option

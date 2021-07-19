@@ -26,11 +26,8 @@ A union type comprised of all types that can be cast to a JSBI instance.
 ```typescript
 import { ChainId } from '@uniswap/sdk'
 // enum ChainId {
-//   MAINNET = 1,
-//   ROPSTEN = 3,
-//   RINKEBY = 4,
-//   GÖRLI = 5,
-//   KOVAN = 42
+//   TESTNET = 0x27
+//   MAINNET = 0x4a,
 // }
 ```
 
