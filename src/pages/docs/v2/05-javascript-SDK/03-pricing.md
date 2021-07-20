@@ -20,7 +20,7 @@ The simplest way to get the VTHO-VVET mid price is to observe the pair directly:
 ```typescript
 import { ChainId, Token, VVET, Fetcher, Route } from 'vexchange-sdk'
 
-const VTHO = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
+const VTHO = new Token(ChainId.MAINNET, '0x0000000000000000000000000000456E65726779', 18)
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
@@ -46,7 +46,7 @@ For the sake of example, let's imagine a direct pair between VTHO and VVET _does
 import { ChainId, Token, VVET, Fetcher, Route } from 'vexchange-sdk'
 
 const USDC = new Token(ChainId.MAINNET, '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', 6)
-const VTHO = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
+const VTHO = new Token(ChainId.MAINNET, '0x0000000000000000000000000000456E65726779', 18)
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
@@ -68,7 +68,7 @@ Imagine we're interested in trading 1 VVET for VTHO:
 ```typescript
 import { ChainId, Token, VVET, Fetcher, Trade, Route, TokenAmount, TradeType } from 'vexchange-sdk'
 
-const VTHO = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
+const VTHO = new Token(ChainId.MAINNET, '0x0000000000000000000000000000456E65726779', 18)
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
