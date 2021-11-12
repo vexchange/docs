@@ -6,7 +6,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Menu from './menu'
 
-import Uni from '../images/uni.inline.svg'
 import MenuIcon from '../images/menu.inline.svg'
 import CloseIcon from '../images/x.inline.svg'
 
@@ -144,22 +143,6 @@ const MenuToggle = styled.button`
     position: ${({ open }) => (open ? 'fixed' : 'relative')};
     right: ${({ open }) => (open ? '1.5rem' : 'initial')};
     top: ${({ open }) => (open ? '1.5rem' : 'initial')};
-  }
-`
-
-const StyledUni = styled(Uni)`
-  path {
-    fill: ${({ theme }) => theme.textColor};
-  }
-  margin: 0;
-  width: 28px;
-  height: 28px;
-  margin-right: 0.35rem;
-  margin-top: -4px;
-  transform: rotate(0deg);
-  transition: transform 0.2s linear;
-  :hover {
-    transform: rotate(-10deg);
   }
 `
 
