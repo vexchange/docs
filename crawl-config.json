@@ -27,14 +27,7 @@
         "version": ["v2"]
       }
     },
-
-    {
-      "url": "https://docs.vexchange.io/docs/v2/protocol-overview/smart-contracts/",
-      "extra_attributes": {
-        "version": ["v2"]
-      }
-    },
-
+    
     {
       "url": "https://docs.vexchange.io/docs/v2/protocol-overview/glossary/",
       "extra_attributes": {
@@ -105,18 +98,6 @@
     },
     {
       "url": "https://docs.vexchange.io/docs/v2/advanced-topics/research/",
-      "extra_attributes": {
-        "version": ["v2"]
-      }
-    },
-    {
-      "url": "https://docs.vexchange.io/docs/v2/API/entities/",
-      "extra_attributes": {
-        "version": ["v2"]
-      }
-    },
-    {
-      "url": "https://docs.vexchange.io/docs/v2/API/queries/",
       "extra_attributes": {
         "version": ["v2"]
       }
