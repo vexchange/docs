@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 const SearchWrapper = styled.div`
+  display: none;
   position: relative;
   width: 100%;
   form {
