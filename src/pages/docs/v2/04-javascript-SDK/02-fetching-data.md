@@ -63,7 +63,7 @@ const tokenAddress = '0x0000000000000000000000000000456E65726779' // must be che
 const VTHO: Token = await Fetcher.fetchTokenData(chainId, tokenAddress)
 ```
 
-By default, this method will use the [default provider defined by ethers.js](https://docs.ethers.io/v5/api/providers/#providers-getDefaultProvider). 
+By default, this method will use the [default provider defined by ethers.js](https://docs.ethers.io/v5/api/providers/#providers-getDefaultProvider).
 If you're already using ethers.js in your application, you may pass in your provider as a 3rd argument.
 If you're using another library, you'll have to fetch the data separately.
 
@@ -101,7 +101,7 @@ const VTHO = await Fetcher.fetchTokenData(
 
 # Case 2: Pairs
 
-Now that we've explored how to define a token, let's talk about pairs. To read more about what Uniswap pairs are, see <Link to='/docs/v2/smart-contracts/pair'>Pair</Link>.
+Now that we've explored how to define a token, let's talk about pairs. To read more about what Vexchange pairs are, see <Link to='/docs/v2/smart-contracts/pair'>Pair</Link>.
 
 As an example, let's try to represent the VTHO-VVET pair.
 
