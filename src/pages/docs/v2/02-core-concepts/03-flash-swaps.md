@@ -25,9 +25,9 @@ The first step is to _optimistically_ withdraw 1 VET from Vexchange via a flash 
 - 1 VET is the pre-calculated profit-maximizing trade
 - The price has not changed on Vexchange or Oasis since our calculation
 
-It may be the case that we'd like to calculate the profit-maximizing trade on-chain at the moment of execution, which is robust to price movements. This can be somewhat complex, depending on the strategy being executed. However, one common strategy is trading as profitably as possible _against a fixed external price_. (This price may be e.g. the average execution price of one or more orders on Oasis.) If the Vexchange market price is far enough above or below this external price, the following example contains code that calculates the amount to trade over Vexchange for maximum profit: [`ExampleSwapToPrice.sol`](https://github.com/Vexchange/Vexchange-v2-periphery/blob/master/contracts/examples/ExampleSwapToPrice.sol).
+It may be the case that we'd like to calculate the profit-maximizing trade on-chain at the moment of execution, which is robust to price movements. This can be somewhat complex, depending on the strategy being executed. However, one common strategy is trading as profitably as possible _against a fixed external price_. (This price may be e.g. the average execution price of one or more orders on Oasis.) If the Vexchange market price is far enough above or below this external price, the following example contains code that calculates the amount to trade over Vexchange for maximum profit: [`VexchangeV2Router02.sol`](https://github.com/vexchange/vexchange-contracts/blob/main/vexchange-v2-periphery/contracts/VexchangeV2Router02.sol).
 
-<Github href="https://github.com/Vexchange/Vexchange-v2-periphery/blob/master/contracts/examples/ExampleSwapToPrice.sol">ExampleSwapToPrice.sol</Github>
+<Github href="https://github.com/vexchange/vexchange-contracts/blob/main/vexchange-v2-periphery/contracts/VexchangeV2Router02.sol">VexchangeV2Router02.sol</Github>
 
 ### Trade at External Venue
 

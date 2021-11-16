@@ -30,7 +30,3 @@ If you'd like to send an exact amount of input tokens in exchange for as many ou
 ## Exact Output
 
 If you'd like to receive an exact amount of output tokens for as few input tokens as possible, you'll want to use <Link to='/docs/v2/smart-contracts/router02/#getamountsin'>getAmountsIn</Link>. The equivalent SDK function is <Link to='/docs/v2/SDK/pair/#getinputamount'>getInputAmount</Link>, or <Link to='/docs/v2/SDK/trade/#maximumamountin-since-204'>maximumAmountIn</Link> for slippage calculations.
-
-## Swap to Price
-
-For this more advanced use case, see <Github href="https://github.com/Vexchange/Vexchange-v2-periphery/blob/master/contracts/examples/ExampleSwapToPrice.sol">ExampleSwapToPrice.sol</Github>.

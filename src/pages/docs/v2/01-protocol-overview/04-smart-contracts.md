@@ -27,7 +27,7 @@ Pairs have two primary purposes: serving as automated market makers and keeping 
 
 # Periphery
 
-[Source code](https://github.com/Vexchange/Vexchange-v2-periphery)
+[Source code](https://github.com/vexchange/vexchange-contracts/tree/main/vexchange-v2-periphery/)
 
 The periphery is a constellation of smart contracts designed to support domain-specific interactions with the core. Because of Vexchange's permissionless nature, the contracts described below have no special privileges, and are in fact only a small subset of the universe of possible periphery-like contracts. However, they are useful examples of how to safely and efficiently interact with Vexchange V2.
 
