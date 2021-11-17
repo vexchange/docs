@@ -23,13 +23,13 @@ function factory() external pure returns (address);
 
 Returns <Link to='/docs/v2/smart-contracts/factory/#address'>factory address</Link>.
 
-## VVET
+## WVET
 
 ```solidity
-function WETH() external pure returns (address);
+function WVET() external pure returns (address);
 ```
 
-Returns the [canonical VVET address](https://blog.0xproject.com/canonical-weth-a9aa7d0279dd) on the Ethereum [mainnet](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), or the [Ropsten](https://ropsten.etherscan.io/address/0xc778417e063141139fce010982780140aa0cd5ab), [Rinkeby](https://rinkeby.etherscan.io/address/0xc778417e063141139fce010982780140aa0cd5ab), [Görli](https://goerli.etherscan.io/address/0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6), or [Kovan](https://kovan.etherscan.io/address/0xd0a1e359811322d97991e03f863a0c30c2cf029c) testnets.
+Returns the [canonical WVET address](https://blog.0xproject.com/canonical-WVET-a9aa7d0279dd) on the Ethereum [mainnet](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), or the [Ropsten](https://ropsten.etherscan.io/address/0xc778417e063141139fce010982780140aa0cd5ab), [Rinkeby](https://rinkeby.etherscan.io/address/0xc778417e063141139fce010982780140aa0cd5ab), [Görli](https://goerli.etherscan.io/address/0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6), or [Kovan](https://kovan.etherscan.io/address/0xd0a1e359811322d97991e03f863a0c30c2cf029c) testnets.
 
 ## quote
 
@@ -110,26 +110,26 @@ function addLiquidityETH(
 ) external payable returns (uint amountToken, uint amountETH, uint liquidity);
 ```
 
-Adds liquidity to an VIP-180⇄VVET pool with VET.
+Adds liquidity to an VIP-180⇄WVET pool with VET.
 
 - To cover all possible scenarios, `msg.sender` should have already given the router an allowance of at least amountTokenDesired on token.
 - Always adds assets at the ideal ratio, according to the price when the transaction is executed.
 - `msg.value` is treated as a amountETHDesired.
 - Leftover VET, if any, is returned to `msg.sender`.
-- If a pool for the passed token and VVET does not exists, one is created automatically, and exactly amountTokenDesired/`msg.value` tokens are added.
+- If a pool for the passed token and WVET does not exists, one is created automatically, and exactly amountTokenDesired/`msg.value` tokens are added.
 
 | Name                           | Type      |                                                                                                                           |
 | :----------------------------- | :-------- | :------------------------------------------------------------------------------------------------------------------------ |
 | token                          | `address` | The contract address of the desired token.                                                                                |
-| amountTokenDesired             | `uint`    | The amount of token to add as liquidity if the VVET/token price is <= `msg.value`/amountTokenDesired (token depreciates). |
-| `msg.value` (amountETHDesired) | `uint`    | The amount of VET to add as liquidity if the token/VVET price is <= amountTokenDesired/`msg.value` (VVET depreciates).    |
-| amountTokenMin                 | `uint`    | Bounds the extent to which the VVET/token price can go up before the transaction reverts. Must be <= amountTokenDesired.  |
-| amountETHMin                   | `uint`    | Bounds the extent to which the token/VVET price can go up before the transaction reverts. Must be <= `msg.value`.         |
+| amountTokenDesired             | `uint`    | The amount of token to add as liquidity if the WVET/token price is <= `msg.value`/amountTokenDesired (token depreciates). |
+| `msg.value` (amountETHDesired) | `uint`    | The amount of VET to add as liquidity if the token/WVET price is <= amountTokenDesired/`msg.value` (WVET depreciates).    |
+| amountTokenMin                 | `uint`    | Bounds the extent to which the WVET/token price can go up before the transaction reverts. Must be <= amountTokenDesired.  |
+| amountETHMin                   | `uint`    | Bounds the extent to which the token/WVET price can go up before the transaction reverts. Must be <= `msg.value`.         |
 | to                             | `address` | Recipient of the liquidity tokens.                                                                                        |
 | deadline                       | `uint`    | Unix timestamp after which the transaction will revert.                                                                   |
 |                                |           |                                                                                                                           |
 | amountToken                    | `uint`    | The amount of token sent to the pool.                                                                                     |
-| amountETH                      | `uint`    | The amount of VET converted to VVET and sent to the pool.                                                                 |
+| amountETH                      | `uint`    | The amount of VET converted to WVET and sent to the pool.                                                                 |
 | liquidity                      | `uint`    | The amount of liquidity tokens minted.                                                                                    |
 
 ## removeLiquidity
@@ -176,7 +176,7 @@ function removeLiquidityETH(
 ) external returns (uint amountToken, uint amountETH);
 ```
 
-Removes liquidity from an VIP-180⇄VVET pool and receive VET.
+Removes liquidity from an VIP-180⇄WVET pool and receive VET.
 
 - `msg.sender` should have already given the router an allowance of at least liquidity on the pool.
 
@@ -240,7 +240,7 @@ function removeLiquidityETHWithPermit(
 ) external returns (uint amountToken, uint amountETH);
 ```
 
-Removes liquidity from an VIP-180⇄VVET pool and receive VET without pre-approval, thanks to <Link to='/docs/v2/smart-contracts/pair-vip-180/#permit'>permit</Link>.
+Removes liquidity from an VIP-180⇄WVET pool and receive VET without pre-approval, thanks to <Link to='/docs/v2/smart-contracts/pair-vip-180/#permit'>permit</Link>.
 
 | Name           | Type      |                                                                                      |
 | :------------- | :-------- | :----------------------------------------------------------------------------------- |
@@ -378,7 +378,7 @@ function swapExactETHForTokens(uint amountOutMin, address[] calldata path, addre
   returns (uint[] memory amounts);
 ```
 
-Swaps an exact amount of VET for as many output tokens as possible, along the route determined by the path. The first element of path must be [VVET](#vvet), the last is the output token, and any intermediate elements represent intermediate pairs to trade through (if, for example, a direct pair does not exist).
+Swaps an exact amount of VET for as many output tokens as possible, along the route determined by the path. The first element of path must be [WVET](#wvet), the last is the output token, and any intermediate elements represent intermediate pairs to trade through (if, for example, a direct pair does not exist).
 
 | Name                   | Type                 |                                                                                                                                      |
 | :--------------------- | :------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
@@ -398,7 +398,7 @@ function swapTokensForExactETH(uint amountOut, uint amountInMax, address[] calld
   returns (uint[] memory amounts);
 ```
 
-Receive an exact amount of VET for as few input tokens as possible, along the route determined by the path. The first element of path is the input token, the last must be [VVET](#vvet), and any intermediate elements represent intermediate pairs to trade through (if, for example, a direct pair does not exist).
+Receive an exact amount of VET for as few input tokens as possible, along the route determined by the path. The first element of path is the input token, the last must be [WVET](#wvet), and any intermediate elements represent intermediate pairs to trade through (if, for example, a direct pair does not exist).
 
 - `msg.sender` should have already given the router an allowance of at least amountInMax on the input token.
 - If the to address is a smart contract, it must have the ability to receive VET.
@@ -421,7 +421,7 @@ function swapExactTokensForETH(uint amountIn, uint amountOutMin, address[] calld
   returns (uint[] memory amounts);
 ```
 
-Swaps an exact amount of tokens for as much VET as possible, along the route determined by the path. The first element of path is the input token, the last must be [VVET](#vvet), and any intermediate elements represent intermediate pairs to trade through (if, for example, a direct pair does not exist).
+Swaps an exact amount of tokens for as much VET as possible, along the route determined by the path. The first element of path is the input token, the last must be [WVET](#wvet), and any intermediate elements represent intermediate pairs to trade through (if, for example, a direct pair does not exist).
 
 - If the to address is a smart contract, it must have the ability to receive VET.
 
@@ -444,7 +444,7 @@ function swapETHForExactTokens(uint amountOut, address[] calldata path, address 
   returns (uint[] memory amounts);
 ```
 
-Receive an exact amount of tokens for as little VET as possible, along the route determined by the path. The first element of path must be [VVET](#vvet), the last is the output token and any intermediate elements represent intermediate pairs to trade through (if, for example, a direct pair does not exist).
+Receive an exact amount of tokens for as little VET as possible, along the route determined by the path. The first element of path must be [WVET](#wvet), the last is the output token and any intermediate elements represent intermediate pairs to trade through (if, for example, a direct pair does not exist).
 
 - Leftover VET, if any, is returned to `msg.sender`.
 
@@ -538,7 +538,7 @@ pragma solidity >=0.6.2;
 
 interface IUniswapV2Router01 {
     function factory() external pure returns (address);
-    function WETH() external pure returns (address);
+    function WVET() external pure returns (address);
 
     function addLiquidity(
         address tokenA,

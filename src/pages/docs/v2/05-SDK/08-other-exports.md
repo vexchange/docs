@@ -94,10 +94,10 @@ import { InsufficientReservesError } from 'vexchange-sdk'
 import { InsufficientInputAmountError } from 'vexchange-sdk'
 ```
 
-# WETH
+# WVET
 
 ```typescript
-import { WETH } from 'vexchange-sdk'
+import { WVET } from 'vexchange-sdk'
 ```
 
-An object whose values are <Link to='/docs/v2/smart-contracts/router02/#weth'>WETH</Link> <Link to='/docs/v2/SDK/token'>Token</Link> instances, indexed by [ChainId](#chainid).
+An object whose values are <Link to='/docs/v2/smart-contracts/router02/#WVET'>WVET</Link> <Link to='/docs/v2/SDK/token'>Token</Link> instances, indexed by [ChainId](#chainid).
