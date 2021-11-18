@@ -73,7 +73,7 @@ Emitted when a proposal has been executed in the Timelock.
 
 
 # Read-Only Functions: UNI
- 
+
 ## Get Current Votes
 
 ```solidity
@@ -213,13 +213,13 @@ function state(uint proposalId) returns (ProposalState)
 ```
 
 Returns enum of type ProposalState, possible types are:
--Pending 
--Active 
+-Pending
+-Active
 -Canceled
--Defeated 
--Succeeded 
+-Defeated
+-Succeeded
 -Queued
--Expired 
+-Expired
 -andExecuted
 
 | Name           | Type      |                                                                                                                    |
@@ -282,7 +282,7 @@ This function is payable so the Timelock contract can invoke payable functions t
 | proposalId     | `uint`    | ID of a given successful proposal                                                                                  |
 
 
-## Cancel 
+## Cancel
 
 ```solidity
 function queue(uint proposalId)

@@ -5,7 +5,7 @@ tags: smart-contracts, documentation
 
 # Code
 
-[`governance`](https://github.com/Uniswap/governance)
+[`governance`](https://github.com/vexchange/governance)
 
 # Documentation
 

@@ -13,7 +13,7 @@ To understand the risks associated with providing liquidity you can read [https:
 
 <blockquote>
 
-Consider the case where a liquidity provider adds 10,000 VTHO and 100 VVET to a pool (for a total value of \$20,000), the liquidity pool is now 100,000 VTHO and 1,000 VET in total. Because the amount supplied is equal to 10% of the total liquidity, the contract mints and sends the market maker “liquidity tokens” which entitle them to 10% of the liquidity available in the pool. These are not speculative tokens to be traded. They are merely an accounting or bookkeeping tool to keep track of how much the liquidity providers are owed. If others subsequently add/withdraw coins, new liquidity tokens are minted/burned such that everyone’s relative percentage share of the liquidity pool remains the same.
+Consider the case where a liquidity provider adds 10,000 VTHO and 100 WVET to a pool (for a total value of \$20,000), the liquidity pool is now 100,000 VTHO and 1,000 VET in total. Because the amount supplied is equal to 10% of the total liquidity, the contract mints and sends the market maker “liquidity tokens” which entitle them to 10% of the liquidity available in the pool. These are not speculative tokens to be traded. They are merely an accounting or bookkeeping tool to keep track of how much the liquidity providers are owed. If others subsequently add/withdraw coins, new liquidity tokens are minted/burned such that everyone’s relative percentage share of the liquidity pool remains the same.
 
 **Now let’s assume the price trades on Coinbase from $100 to $150. The Vexchange contract should reflect this change as well after some arbitrage. Traders will add VTHO and remove VET until the new ratio is now 150:1.**
 

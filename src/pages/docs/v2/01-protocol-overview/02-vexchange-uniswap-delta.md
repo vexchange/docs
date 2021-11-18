@@ -1,12 +1,16 @@
+---
+title: Differences between Vexchange V2 and Uniswap V2
+tags: protocol-overview, documentation
+---
 # Summary delta between Vexchange V2 and Uniswap V2
 
 This section outlines the key differences between Vexchange V2 and Uniswap V2, and walks through each of the areas of difference in the smart contract implementation.
 
 ## Variable Fees
 
-Vexchange V2 introduced the ability to adjust swap fees up and down through governance. 
+Vexchange V2 introduced the ability to adjust swap fees up and down through governance.
 
-This feature was present in V1 but was underutilized, as no active governance mechanism was developed. In V2, we plan to deploy and encourage active governance over the platform to ensure Vexchange meets its goals of providing the best VIP180 swap experience possible. 
+This feature was present in V1 but was underutilized, as no active governance mechanism was developed. In V2, we plan to deploy and encourage active governance over the platform to ensure Vexchange meets its goals of providing the best VIP180 swap experience possible.
 
 Uniswap V3 has also moved towards multiple fee levels, which reinforces the value variable swap & platform fees will add to the Vexchange ecosystem.
 
@@ -135,7 +139,7 @@ Sets the recovery address on a specific pair contract.
 
 ## Contract: VexchangeV2Pair
 
-The ExchangeV2Pair is the most significantly modified contract from the original Uniswap V2 implementation. 
+The ExchangeV2Pair is the most significantly modified contract from the original Uniswap V2 implementation.
 
 ### New constants and contract state
 Constants have been added for the variable fee calculations - for range constraints for the fee values, as well as accuracy multipliers. These accuracy constants are used to support accurate calculation of the platform fee.
@@ -195,7 +199,7 @@ function setSwapFee(uint _swapFee) external onlyFactory
 #### setPlatformFee()
 Allows the platform-fee to be set on this pair; this is callable only by the parent VexchangeV2Factory.
 ```solidity
-function setPlatformFee(uint _platformFee) external onlyFactory 
+function setPlatformFee(uint _platformFee) external onlyFactory
 ```
 
 #### setRecoverer()

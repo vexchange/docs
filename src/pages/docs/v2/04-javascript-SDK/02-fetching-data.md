@@ -63,7 +63,7 @@ const tokenAddress = '0x0000000000000000000000000000456E65726779' // must be che
 const VTHO: Token = await Fetcher.fetchTokenData(chainId, tokenAddress)
 ```
 
-By default, this method will use the [default provider defined by ethers.js](https://docs.ethers.io/v5/api/providers/#providers-getDefaultProvider). 
+By default, this method will use the [default provider defined by ethers.js](https://docs.ethers.io/v5/api/providers/#providers-getDefaultProvider).
 If you're already using ethers.js in your application, you may pass in your provider as a 3rd argument.
 If you're using another library, you'll have to fetch the data separately.
 
@@ -74,13 +74,7 @@ Finally, we can talk about **symbol** and **name**. Because these fields aren't 
 ```typescript
 import { ChainId, Token } from 'vexchange-sdk'
 
-const VTHO = new Token(
-  ChainId.MAINNET,
-  '0x0000000000000000000000000000456E65726779',
-  18,
-  'VTHO',
-  'VTHO Stablecoin'
-)
+const VTHO = new Token(ChainId.MAINNET, '0x0000000000000000000000000000456E65726779', 18, 'VTHO', 'VTHO Stablecoin')
 ```
 
 or:
@@ -101,13 +95,13 @@ const VTHO = await Fetcher.fetchTokenData(
 
 # Case 2: Pairs
 
-Now that we've explored how to define a token, let's talk about pairs. To read more about what Uniswap pairs are, see <Link to='/docs/v2/smart-contracts/pair'>Pair</Link>.
+Now that we've explored how to define a token, let's talk about pairs. To read more about what Vexchange pairs are, see <Link to='/docs/v2/smart-contracts/pair'>Pair</Link>.
 
-As an example, let's try to represent the VTHO-VVET pair.
+As an example, let's try to represent the VTHO-WVET pair.
 
 ## Identifying Data
 
-Each pair consists of two tokens (see previous section). Note that VVET used by the router is <Link to='/docs/v2/SDK/other-exports/#VVET'>exported by the SDK</Link>.
+Each pair consists of two tokens (see previous section). Note that WVET used by the router is <Link to='/docs/v2/SDK/other-exports/#WVET'>exported by the SDK</Link>.
 
 ## Required Data
 
@@ -118,17 +112,19 @@ The data we need is the _reserves_ of the pair. To read more about reserves, see
 One option here is to simply pass in values which we've fetched ourselves to create a <Link to='/docs/v2/SDK/pair'>Pair</Link>:
 
 ```typescript
-import { ChainId, Token, VVET, Pair, TokenAmount } from 'vexchange-sdk'
+import { ChainId, Token, WVET, Pair, TokenAmount } from 'vexchange-sdk'
 
 const VTHO = new Token(ChainId.MAINNET, '0x0000000000000000000000000000456E65726779', 18)
 
 async function getPair(): Promise<Pair> {
-  const pairAddress = Pair.getAddress(VTHO, VVET[VTHO.chainId])
+  const pairAddress = Pair.getAddress(VTHO, WVET[VTHO.chainId])
 
-  const reserves = [/* use pairAddress to fetch reserves here */]
+  const reserves = [
+    /* use pairAddress to fetch reserves here */
+  ]
   const [reserve0, reserve1] = reserves
 
-  const tokens = [VTHO, VVET[VTHO.chainId]]
+  const tokens = [VTHO, WVET[VTHO.chainId]]
   const [token0, token1] = tokens[0].sortsBefore(tokens[1]) ? tokens : [tokens[1], tokens[0]]
 
   const pair = new Pair(new TokenAmount(token0, reserve0), new TokenAmount(token1, reserve1))
@@ -143,13 +139,13 @@ Note that these values can change as frequently as every block, and should be ke
 If we don't want to look up the value ourselves, we can ask the SDK to look them up for us with <Link to='/docs/v2/SDK/fetcher#fetchpairdata'>Fetcher.fetchPairData</Link>:
 
 ```typescript
-import { ChainId, Token, VVET, Fetcher } from 'vexchange-sdk'
+import { ChainId, Token, WVET, Fetcher } from 'vexchange-sdk'
 
 const VTHO = new Token(ChainId.MAINNET, '0x0000000000000000000000000000456E65726779', 18)
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
-const pair = await Fetcher.fetchPairData(VTHO, VVET[VTHO.chainId])
+const pair = await Fetcher.fetchPairData(VTHO, WVET[VTHO.chainId])
 ```
 
 By default, this method will use the [default provider defined by ethers.js](https://docs.ethers.io/v5/api/providers/#providers-getDefaultProvider). If you're already using ethers.js in your application, you may pass in your provider as a 3rd argument. If you're using another library, you'll have to fetch the data separately.

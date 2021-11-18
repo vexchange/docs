@@ -32,10 +32,6 @@ const menu = [
     name: 'About',
     sublinks: [
       {
-        name: 'Info',
-        link: '/about'
-      },
-      {
         name: 'FAQ',
         link: '/faq'
       },
